@@ -98,28 +98,28 @@ const Hero = () => {
       </div>
 
       {/* Hero Image */}
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        className="relative hidden md:block w-1/2 h-[600px]"
-      >
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-40"></div>
-          <div className="absolute inset-8 bg-gradient-to-br from-gray-900 to-gray-800 rounded-full border-4 border-white/10 overflow-hidden">
-            <img
-              src="/pp.jpg"
-              alt="Profile"
-              className="w-full h-full object-cover rounded-full filter brightness-110"
-            />
-          </div>
-          {/* Decorative Elements */}
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500 rounded-full opacity-20 animate-bounce"></div>
-          <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute top-1/4 -right-16 w-16 h-16 bg-white rounded-full opacity-10 animate-ping"></div>
-        </div>
-      </motion.div>
+  <motion.div
+  initial={{ opacity: 0, x: 100 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+  className="relative w-full md:w-1/2 h-[300px] md:h-[600px]"
+>
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[400px] h-[250px] md:h-[400px]">
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
+    <div className="absolute inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-40"></div>
+    <div className="absolute inset-8 bg-gradient-to-br from-gray-900 to-gray-800 rounded-full border-4 border-white/10 overflow-hidden">
+      <img
+        src="/pp.jpg"
+        alt="Profile"
+        className="w-full h-full object-cover rounded-full filter brightness-110"
+      />
+    </div>
+    {/* Decorative Elements */}
+    <div className="absolute -top-4 -right-4 w-16 h-16 md:w-24 md:h-24 bg-blue-500 rounded-full opacity-20 animate-bounce"></div>
+    <div className="absolute -bottom-8 -left-8 w-20 h-20 md:w-32 md:h-32 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
+    <div className="absolute top-1/4 -right-16 w-12 h-12 md:w-16 md:h-16 bg-white rounded-full opacity-10 animate-ping"></div>
+  </div>
+</motion.div>
 
       {/* Scroll Indicator */}
       <motion.div
