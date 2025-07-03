@@ -1,0 +1,23 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#1F2937"/>
+  <rect x="250" y="150" width="300" height="300" rx="20" fill="#374151"/>
+  
+  <!-- Task Items -->
+  <rect x="270" y="180" width="260" height="50" rx="8" fill="#4B5563"/>
+  <rect x="290" y="195" width="180" height="20" rx="4" fill="#60A5FA"/>
+  
+  <rect x="270" y="250" width="260" height="50" rx="8" fill="#4B5563"/>
+  <rect x="290" y="265" width="140" height="20" rx="4" fill="#60A5FA"/>
+  
+  <rect x="270" y="320" width="260" height="50" rx="8" fill="#4B5563"/>
+  <rect x="290" y="335" width="160" height="20" rx="4" fill="#60A5FA"/>
+  
+  <!-- Checkboxes -->
+  <rect x="500" y="195" width="20" height="20" rx="4" fill="#34D399"/>
+  <path d="M505 205L510 210L515 200" stroke="white" stroke-width="2"/>
+  
+  <rect x="500" y="265" width="20" height="20" rx="4" fill="#34D399"/>
+  <path d="M505 275L510 280L515 270" stroke="white" stroke-width="2"/>
+  
+  <rect x="500" y="335" width="20" height="20" rx="4" stroke="#60A5FA" fill="none"/>
+</svg>
