@@ -40,15 +40,15 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className={`text-3xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
             Featured Projects
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} transition-colors duration-300`}>
+          <p className={`text-base sm:text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} transition-colors duration-300`}>
             Here are some of my recent projects that showcase my skills and experience
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -66,15 +66,15 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className={`text-2xl font-bold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>{project.title}</h3>
-                <p className={`mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} transition-colors duration-300`}>{project.description}</p>
+              <div className="p-4 sm:p-6">
+                <h3 className={`text-xl sm:text-2xl font-bold mb-2 sm:mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>{project.title}</h3>
+                <p className={`text-sm sm:text-base mb-3 sm:mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} transition-colors duration-300`}>{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className={`px-3 py-1 text-sm rounded-full ${isDarkMode ? 'text-blue-400 bg-blue-400/10' : 'text-blue-600 bg-blue-100'} transition-colors duration-300`}
+                      className={`px-2 sm:px-3 py-1 text-xs sm:text-sm rounded-full ${isDarkMode ? 'text-blue-400 bg-blue-400/10' : 'text-blue-600 bg-blue-100'} transition-colors duration-300`}
                     >
                       {tech}
                     </span>
@@ -86,7 +86,7 @@ const Projects = () => {
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg hover:opacity-90 transition-opacity text-center"
+                    className="flex-1 px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg hover:opacity-90 transition-opacity text-center"
                   >
                     Live Demo
                   </a>
@@ -94,7 +94,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex-1 px-6 py-2 text-sm font-medium rounded-lg transition-colors text-center ${isDarkMode ? 'text-white border border-gray-700 hover:bg-gray-800' : 'text-gray-900 border border-gray-300 hover:bg-gray-100'}`}
+                    className={`flex-1 px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors text-center ${isDarkMode ? 'text-white border border-gray-700 hover:bg-gray-800' : 'text-gray-900 border border-gray-300 hover:bg-gray-100'}`}
                   >
                     GitHub
                   </a>

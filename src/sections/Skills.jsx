@@ -80,10 +80,10 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className={`text-3xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
             Technical Skills
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} transition-colors duration-300`}>
+          <p className={`text-base sm:text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} transition-colors duration-300`}>
             Here's an overview of my technical skills and proficiency levels
           </p>
         </motion.div>
@@ -93,13 +93,13 @@ const Skills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
-              className={`rounded-2xl p-8 shadow-xl transform transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
+              className={`rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl transform transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
             >
               <div className="flex items-center justify-center mb-6">
                 <motion.div
@@ -109,11 +109,11 @@ const Skills = () => {
                 >
                   {category.icon}
                 </motion.div>
-                <h3 className={`text-2xl font-bold ml-3 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
+                <h3 className={`text-xl sm:text-2xl font-bold ml-3 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
                   {category.title}
                 </h3>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-2">
@@ -144,10 +144,10 @@ const Skills = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <h3 className={`text-2xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
+          <h3 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'} transition-colors duration-300`}>
             Additional Skills
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {[
               'TypeScript',
               'Redux',
@@ -161,7 +161,7 @@ const Skills = () => {
               <motion.span
                 key={skill}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className={`px-4 py-2 rounded-full transition-colors duration-300 cursor-pointer ${isDarkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-white text-gray-700 hover:bg-gray-100'}`}
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-colors duration-300 cursor-pointer ${isDarkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-white text-gray-700 hover:bg-gray-100'}`}
               >
                 {skill}
               </motion.span>

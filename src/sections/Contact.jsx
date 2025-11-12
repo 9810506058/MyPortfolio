@@ -53,7 +53,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className={`py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
+    <section id="contact" className={`py-12 sm:py-20 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -62,22 +62,22 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className={`text-3xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             Get In Touch
           </h2>
-          <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          <p className={`text-base sm:text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             Feel free to reach out if you're looking for a developer, have a question, or just want to connect
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className={`rounded-2xl p-8 shadow-xl ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}
+            className={`rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -127,7 +127,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity duration-300 transform hover:-translate-y-1"
+                className="w-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity duration-300 transform hover:-translate-y-1"
               >
                 Send Message
               </button>
@@ -142,8 +142,8 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className={`rounded-2xl p-8 shadow-xl ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-              <h3 className={`text-2xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Contact Information</h3>
+            <div className={`rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+              <h3 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <svg
@@ -198,8 +198,8 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className={`rounded-2xl p-8 shadow-xl ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-              <h3 className={`text-2xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Connect With Me</h3>
+            <div className={`rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+              <h3 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Connect With Me</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a

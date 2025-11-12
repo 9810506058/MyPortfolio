@@ -1,30 +1,20 @@
 import { motion } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
 
 const Hero = () => {
-  const { isDarkMode } = useTheme();
-
   return (
-    <section className={`relative h-screen flex items-center justify-between overflow-hidden px-4 md:px-12 ${
-      isDarkMode
-        ? 'bg-gradient-to-b from-gray-900 to-gray-800'
-        : 'bg-gradient-to-b from-gray-100 to-gray-200'
-    }`}>
+    <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-center md:justify-between bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden px-4 md:px-12 py-20 md:py-0">
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className={`absolute inset-0 opacity-20 ${
-          isDarkMode ? 'bg-blue-500' : 'bg-blue-300'
-        }`}>
+        <div className="absolute inset-0 opacity-20">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full"
+              className="absolute bg-blue-500 rounded-full"
               style={{
                 width: Math.random() * 300 + 50,
                 height: Math.random() * 300 + 50,
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                backgroundColor: isDarkMode ? 'rgba(59, 130, 246, 0.5)' : 'rgba(147, 197, 253, 0.5)'
               }}
               animate={{
                 scale: [1, 2, 1],
@@ -42,16 +32,14 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-left max-w-2xl">
+      <div className="relative z-10 text-center md:text-left max-w-2xl mx-auto md:mx-0 mb-12 md:mb-0">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="space-y-6"
         >
-          <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${
-            isDarkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6">
             Hi, I'm{' '}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
               Prashant
@@ -62,7 +50,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 100 }}
-            className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} text-xl md:text-2xl`}
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 px-4 md:px-0"
           >
             Full Stack Developer crafting modern web experiences with React, Node.js, and cutting-edge technologies
           </motion.p>
@@ -71,25 +59,17 @@ const Hero = () => {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100 }}
-            className="flex gap-4 mt-8"
+            className="flex flex-col sm:flex-row gap-4 mt-8 px-4 md:px-0"
           >
             <a
               href="#projects"
-              className={`px-8 py-3 text-lg font-medium rounded-full hover:opacity-90 transition-opacity duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 ${
-                isDarkMode
-                  ? 'text-white bg-gradient-to-r from-blue-500 to-purple-600'
-                  : 'text-gray-900 bg-gradient-to-r from-blue-300 to-purple-400'
-              }`}
+              className="px-6 sm:px-8 py-3 text-base sm:text-lg font-medium text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:opacity-90 transition-opacity duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className={`px-8 py-3 text-lg font-medium border-2 rounded-full hover:bg-white/10 transition-colors duration-300 ${
-                isDarkMode
-                  ? 'text-white border-white/20'
-                  : 'text-gray-900 border-gray-300'
-              }`}
+              className="px-6 sm:px-8 py-3 text-base sm:text-lg font-medium text-white border-2 border-white/20 rounded-full hover:bg-white/10 transition-colors duration-300"
             >
               Contact Me
             </a>
@@ -98,28 +78,28 @@ const Hero = () => {
       </div>
 
       {/* Hero Image */}
-  <motion.div
-  initial={{ opacity: 0, x: 100 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1 }}
-  className="relative w-full md:w-1/2 h-[300px] md:h-[600px]"
->
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[400px] h-[250px] md:h-[400px]">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
-    <div className="absolute inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-40"></div>
-    <div className="absolute inset-8 bg-gradient-to-br from-gray-900 to-gray-800 rounded-full border-4 border-white/10 overflow-hidden">
-      <img
-        src="/pp.jpg"
-        alt="Profile"
-        className="w-full h-full object-cover rounded-full filter brightness-110"
-      />
-    </div>
-    {/* Decorative Elements */}
-    <div className="absolute -top-4 -right-4 w-16 h-16 md:w-24 md:h-24 bg-blue-500 rounded-full opacity-20 animate-bounce"></div>
-    <div className="absolute -bottom-8 -left-8 w-20 h-20 md:w-32 md:h-32 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-    <div className="absolute top-1/4 -right-16 w-12 h-12 md:w-16 md:h-16 bg-white rounded-full opacity-10 animate-ping"></div>
-  </div>
-</motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className="relative w-full md:w-1/2 h-[300px] md:h-[600px]"
+      >
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px]">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 animate-pulse"></div>
+          <div className="absolute inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-40"></div>
+          <div className="absolute inset-8 bg-gradient-to-br from-gray-900 to-gray-800 rounded-full border-4 border-white/10 overflow-hidden">
+            <img
+              src="/pp.jpg"
+              alt="Profile"
+              className="w-full h-full object-cover rounded-full filter brightness-110"
+            />
+          </div>
+          {/* Decorative Elements */}
+          <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500 rounded-full opacity-20 animate-bounce"></div>
+          <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
+          <div className="absolute top-1/4 -right-16 w-16 h-16 bg-white rounded-full opacity-10 animate-ping"></div>
+        </div>
+      </motion.div>
 
       {/* Scroll Indicator */}
       <motion.div
